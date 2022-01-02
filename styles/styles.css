@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(44, 41, 41);
+  background-color: rgb(247, 239, 247);
+}
+
+#main-header {
+  background-color: lightskyblue;
+  color: white;
+  padding: 2rem 5%;
+  text-align: center;
+}
+
+.btn {
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  background-color: lightskyblue;
+  border: lightskyblue;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-alt {
+  background-color: transparent;
+  border-color: transparent;
+  color: lightskyblue;
+}
+
+.btn:hover {
+  background-color: lightsteelblue;
+  border-color: lightsteelblue;
+  color: white;
+}
+
+.btn-alt:hover {
+  background-color: lightblue;
+  border-color: transparent;
+  color: white;
+}
