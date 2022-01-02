@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+</head>
+<body>
+  <header>
+    <h1>Tic Tac Toe spielen</h1>
+    <p>Gebaut in HTML, CSS und JavaScript</p>
+  </header>
+  <main>
+    <aside>
+      <h2>Namen auswählen</h2>
+      <form>
+        <div>
+          <label for="playername">Spielername</label>
+          <input type="text" name="username" id="playername">
+        </div>
+        <div>
+          <button type="button">Abbrechen</button>
+          <button type="submit">Bestätigen</button>
+        </div>
+      </form>
+    </aside>
+    <section id="game-configuration">
+      <ol>
+        <li>
+          <article>
+            <h2>Spieler 1</h2>
+            <h3>PLAYER NAME</h3>
+            <p>X</p>
+            <button>Edit</button>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h2>Spieler 2</h2>
+            <h3>PLAYER NAME</h3>
+            <p>O</p>
+            <button>Edit</button>
+          </article>
+        </li>
+      </ol>
+      <button>Neues Spiel beginnen</button>
+    </section>
+    <section id="active-game">
+      <article>
+        <h3>Du hast gewonnen, <span id="winner-name">PLAYER NAME</span>!</h3>
+        <p>Klicke auf "Neues Spiel beginnen", um eine neue Runde zu starten!</p>
+      </article>
+      <p>Du bist dran, <span id="active-player-name">PLAYER NAME</span>!</p>
+      <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+
+        <li></li>
+        <li></li>
+        <li></li>
+
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+    </section>
+  </main>
+</body>
+</html>
