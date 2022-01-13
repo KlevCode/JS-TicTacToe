@@ -12,9 +12,9 @@
   <link rel="stylesheet" href="styles/overlays.css">
   <link rel="stylesheet" href="styles/configuration.css">
   <link rel="stylesheet" href="styles/game.css">
-  <script src="scripts/config.js"></script>
-  <script src="scripts/game.js"></script>
-  <script src="scripts/app.js"></script>
+  <script src="scripts/config.js" defer></script>
+  <script src="scripts/game.js" defer></script>
+  <script src="scripts/app.js" defer></script>
 </head>
 <body>
   <div id="backdrop"></div>
@@ -26,10 +26,11 @@
 
     <aside class="modal" id="config-overlay">
       <h2>Gib deinen Namen ein</h2>
+
       <form>
         <div class="form-control">
           <label for="playername">Spielername</label>
-          <input type="text" name="playerrname" id="playername">
+          <input type="text" name="playername" id="playername" />
         </div>
         <div>
           <button type="button" class="btn btn-alt" id="cancel-config-btn">Abbrechen</button>
@@ -75,7 +76,6 @@
         <li class="disabled">X</li>
         <li></li>
 
-        <li></li>
         <li></li>
         <li class="disabled">O</li>
       </ol>
