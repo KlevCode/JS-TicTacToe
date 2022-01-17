@@ -22,8 +22,20 @@ function selectGameField(event) {
     return;
   }
 
+  const selectedField = event.target;
+  const selectedColumn = selectedField.dataset.col - 1;
+  const selectedRow = selectedField.dataset.row - 1;
 
-  event.target.textContent = players[activePlayer].symbol;
-  event.target.classList.add('disabled');
+  if (gameData[selectedRow][selectedColumn] > 0) {
+    alert('Bitte ein leeres Feld auswählen!')
+    return;
+  }
+
+  selectedField.textContent = players[activePlayer].symbol;
+  selectedField.classList.add('disabled');
+
+
+  gameData[selectedRow][selectedColumn] = activePlayer + 1;
+
   switchPlayer();
 }
