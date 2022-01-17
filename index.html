@@ -30,10 +30,11 @@
       <form>
         <div class="form-control">
           <label for="playername">Spielername</label>
-          <input type="text" name="playername" id="playername" />
+          <input type="text" name="playername" id="playername" required />
         </div>
+        <p id="config-errors"></p>
         <div>
-          <button type="button" class="btn btn-alt" id="cancel-config-btn">Abbrechen</button>
+          <button type="reset" class="btn btn-alt" id="cancel-config-btn">Abbrechen</button>
           <button type="submit" class="btn">Bestätigen</button>
         </div>
       </form>
@@ -42,23 +43,35 @@
     <section id="game-configuration">
       <ol>
         <li>
-          <article>
+          <article id="player-1-data">
             <h2>Spieler 1</h2>
-            <h3>PLAYER NAME</h3>
+            <h3>SPIELERNAME</h3>
             <p class="player-symbol">X</p>
-            <button class="btn btn-alt" id="edit-player-1-btn">Ändern</button>
+            <button
+              class="btn btn-alt"
+              id="edit-player-1-btn"
+              data-playerid="1"
+              >
+              Ändern
+            </button>
           </article>
         </li>
         <li>
-          <article>
+          <article id="player-2-data">
             <h2>Spieler 2</h2>
-            <h3>PLAYER NAME</h3>
+            <h3>SPIELERNAME</h3>
             <p class="player-symbol">O</p>
-            <button class="btn btn-alt" id="edit-player-2-btn">Ändern</button>
+            <button
+              class="btn btn-alt"
+              id="edit-player-2-btn"
+              data-playerid="2"
+              >
+              Ändern
+            </button>
           </article>
         </li>
       </ol>
-      <button class="btn">Neues Spiel beginnen</button>
+      <button class="btn" id="start-game-btn">Neues Spiel beginnen</button>
     </section>
 
     <section id="active-game">
@@ -68,16 +81,17 @@
       </article>
       <p>Du bist dran, <span id="active-player-name">PLAYER NAME</span>!</p>
       <ol id="game-board">
-        <li class="disabled">X</li>
-        <li></li>
-        <li class="disabled">O</li>
+        <li data-col="1" data-row="1"></li>
+        <li data-col="2" data-row="1"></li>
+        <li data-col="3" data-row="1"></li>
 
-        <li></li>
-        <li class="disabled">X</li>
-        <li></li>
+        <li data-col="1" data-row="2"></li>
+        <li data-col="2" data-row="2"></li>
+        <li data-col="3" data-row="2"></li>
 
-        <li></li>
-        <li class="disabled">O</li>
+        <li data-col="1" data-row="3"></li>
+        <li data-col="2" data-row="3"></li>
+        <li data-col="3" data-row="3"></li>
       </ol>
     </section>
 
